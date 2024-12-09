@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3cEf5zqJQDWdOeBn65LTqOHwXM81+hv6M9+Qfher1ry4/Qz4+1lJhpmUpCJCYd" crossorigin="anonymous">
-  <title>Bohdan Latkovskyi - Resume</title>
+  <title>Bohdan Latkovskyi</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
   <style>
     /* Reset and base styles */
     * {
@@ -223,6 +226,8 @@
   </style>
 </head>
 <body>
+<div id="app">
+  <div v-if="cvData">
   <div class="fixed-wrapper">
     <div class="button-container">
       <a href="Bohdan_Latkovskyi_CV.pdf" class="download-btn" download="Bohdan_Latkovskyi_CV.pdf">Download CV</a>
@@ -231,12 +236,12 @@
   <div class="container">
     <header class="row">
       <div class="col-md-12">
-        <h1 class="display-4">Bohdan Latkovskyi</h1>
+        <h1 class="display-4">{{ cvData.personalInfo.name }}</h1>
         <div class="contact-info">
-          <span>Calgary, Canada</span>
-          <a href="tel:403-875-3944" aria-label="Phone number: 403-875-3944">403-875-3944</a>
-          <a href="mailto:bogdanlotuk@gmail.com" aria-label="Email: bogdanlotuk@gmail.com">bogdanlotuk@gmail.com</a>
-          <a href="https://www.linkedin.com/in/bohdan-latkovskyi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
+          <span>{{ cvData.personalInfo.location }}</span>
+          <a :href="`tel:${cvData.personalInfo.contact.phone}`" :aria-label="`Phone number: ${cvData.personalInfo.contact.phone}`">{{ cvData.personalInfo.contact.phone }}</a>
+          <a :href="`mailto:${cvData.personalInfo.contact.email}`" :aria-label="`Email: ${cvData.personalInfo.contact.email}`">{{ cvData.personalInfo.contact.email }}</a>
+          <a :href="cvData.personalInfo.contact.linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
         </div>
       </div>
     </header>
@@ -245,7 +250,7 @@
       <div class="col-md-12">
         <h2 class="section-heading">Professional Summary</h2>
         <p>
-          Results-driven and versatile professional with years of experience in quality assurance, specializing in user support, test automation and project management. Proven track record of delivering high-quality solutions and driving continuous improvement initiatives. Skilled in collaborating with cross-functional teams to achieve project goals and exceed client expectations. Seeking opportunities to leverage my diverse skill set and expertise in a challenging role within the Canadian market.
+          {{ cvData.professionalSummary }}
         </p>
       </div>
     </section>
@@ -254,21 +259,7 @@
       <div class="col-md-12">
         <h2 class="section-heading">Skills</h2>
         <ul class="skills-list" role="list">
-          <li class="skill-item">Customer Support</li>
-          <li class="skill-item">Project Management</li>
-          <li class="skill-item">Test Automation</li>
-          <li class="skill-item">Quality Assurance</li>
-          <li class="skill-item">Playwright</li>
-          <li class="skill-item">Selenium</li>
-          <li class="skill-item">Selenide</li>
-          <li class="skill-item">TestNG</li>
-          <li class="skill-item">JUnit</li>
-          <li class="skill-item">Git</li>
-          <li class="skill-item">Agile Methodologies</li>
-          <li class="skill-item">Java Core</li>
-          <li class="skill-item">Python Core</li>
-          <li class="skill-item">SQL</li>
-          <li class="skill-item">AWS</li>
+          <li v-for="skill in cvData.skills" :key="skill" class="skill-item" >{{ skill }}</li>
         </ul>
       </div>
     </section>
@@ -277,40 +268,17 @@
       <div class="col-md-12">
         <h2 class="section-heading">Work Experience</h2>
 
-        <div class="mb-4">
-          <h3 class="job-title">User Support Technician (volunteer)</h3>
-          <p class="company-date">Calgary Food Bank, Calgary, Canada | Jun 2024 – Present</p>
-          <p>Call Center Operators allow the Food Bank to fulfill its mission of providing emergency food support for families and individuals facing crisis and helping our clients by determining the root cause of the client's situation and connecting them with appropriate partnering agencies.</p>
-        </div>
-
-        <div class="mb-4">
-          <h3 class="job-title">Quality Assurance Engineer</h3>
-          <p class="company-date">Pillar – Solid Offshore, Vinnytsia, Ukraine | Oct 2021 – Apr 2024</p>
-          <p>Developed and executed web application test plans, combining manual and automated testing methods. Analyzed test results, enhancing automated scripts for improved software quality.</p>
-        </div>
-
-        <div class="mb-4">
-          <h3 class="job-title">Embroidery Machine Operator and Designer</h3>
-          <p class="company-date">Funnymedicalcaps, Self-employed, Vinnytsia, Ukraine | Sep 2015 – Mar 2022</p>
-          <p>Collaborated closely with customers to bring their creative visions to life. Managed the embroidery process from start to finish and ensured the quality and precision of each design.</p>
-        </div>
-
-        <div class="mb-4">
-          <h3 class="job-title">Junior Frontend Developer</h3>
-          <p class="company-date">Freelance, Self-employed, Vinnytsia Region, Ukraine | Mar 2020 – Oct 2021</p>
-          <p>Translated design mockups into functional web interfaces using HTML5, CSS3, and JavaScript. Collaborated on frontend feature implementation and participated in code reviews.</p>
-        </div>
-
-        <div class="mb-4">
-          <h3 class="job-title">HVAC Engineer</h3>
-          <p class="company-date">Ukrtransgaz, Vinnytsia region, Ukraine | Jan 2012 – Nov 2020</p>
-          <p>Led teams to ensure project success and mentored for professional growth. Developed HVAC plans adhering to regulations and ensured project quality and safety. Managed project schedules and coordinated with stakeholders, subcontractors, and suppliers.</p>
-        </div>
-
-        <div class="mb-4">
-          <h3 class="job-title">HVAC Draftsman</h3>
-          <p class="company-date">Ukragroenergozberezhennia, Vinnytsia Region, Ukraine | Aug 2010 – Jan 2012</p>
-          <p>Created detailed HVAC drawings, collaborated with engineers, and ensured compliance with codes. Utilized CAD software for accurate 2D and 3D models. Prepared documentation and coordinated system integration into building designs.</p>
+        <div v-for="job in cvData.workExperience" :key="job.position" class="mb-4">
+          <h3 class="job-title">{{ job.position }}</h3>
+          <p class="company-date">
+            {{ job.company }} | {{ job.location }} |
+            {{ job.period.start }} - {{ job.period.end }}
+          </p>
+          <p>
+            <span v-for="(responsibility, index) in job.responsibilities" :key="index">
+              {{ responsibility }}.
+            </span>
+          </p>
         </div>
       </div>
     </section>
@@ -318,22 +286,10 @@
     <section class="row">
       <div class="col-md-12">
         <h2 class="section-heading">Education</h2>
-        <div class="mb-3">
-          <h3>Vinnytsia National Technical University</h3>
-          <p class="company-date">2013 – 2015</p>
-          <p>Master's degree, Electromechanical systems of automation</p>
-        </div>
-
-        <div class="mb-3">
-          <h3>Ivano-Frankivsk National Technical University of Oil and Gas</h3>
-          <p class="company-date">2009 – 2011</p>
-          <p>Master's degree, Design and operation of gas and oil pipelines and gas and oil storage facilities</p>
-        </div>
-
-        <div class="mb-3">
-          <h3>Vinnytsia National Technical University</h3>
-          <p class="company-date">2005 – 2010</p>
-          <p>Master's degree, HVAC, gas supply, water supply</p>
+        <div v-for="edu in cvData.education" :key="edu.institution">
+          <h3>{{ edu.institution }}</h3>
+          <p class="company-date">{{ edu.period.start }} – {{ edu.period.end }}</p>
+          <p>{{ edu.degree }}</p>
         </div>
       </div>
     </section>
@@ -341,13 +297,9 @@
     <section class="row">
       <div class="col-md-12">
         <h2 class="section-heading">Certificates</h2>
-        <div class="mb-3">
-          <h3>Google IT Support Professional Certificate</h3>
-          <p class="company-date">Jul 2024</p>
-        </div>
-        <div class="mb-3">
-          <h3>CompTIA A+</h3>
-          <p class="company-date">Sep 2024</p>
+        <div v-for="cert in cvData.certificates" :key="cert.name" class="mb-3">
+          <h3>{{ cert.name }}</h3>
+          <p class="company-date">{{ cert.date }}</p>
         </div>
       </div>
     </section>
@@ -355,22 +307,47 @@
     <section class="row">
       <div class="col-md-12">
         <h2 class="section-heading">Languages</h2>
-        <p>English - upper intermediate</p>
-        <p>Ukrainian - native</p>
+        <ul v-for="lang in cvData.languages" :key="lang.language" class="list-unstyled">
+          <li>{{ lang.language }} - {{ lang.proficiency }}</li>
+        </ul>
       </div>
     </section>
 
     <section class="row">
       <div class="col-md-12">
         <h2 class="section-heading">Interests</h2>
-        <ul class="list-unstyled">
-          <li>Continuous learning and improvement – reading, online courses</li>
-          <li>Outdoor activities – table tennis, gym</li>
+        <ul v-for="interest in cvData.interests" :key="interest" class="list-unstyled">
+          <li>{{ interest }}</li>
         </ul>
       </div>
     </section>
   </div>
+  </div>
+    <div v-else>
+      Loading...
+    </div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        cvData: null
+      }
+    },
+    mounted() {
+      fetch('cv-json.json')
+              .then(response => response.json())
+              .then(data => {
+                this.cvData = data
+              })
+              .catch(error => {
+                console.error('Error fetching CV data:', error)
+              })
+    }
+  }).mount('#app')
+</script>
 </body>
 </html>
