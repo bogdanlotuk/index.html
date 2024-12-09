@@ -1,0 +1,190 @@
+{
+  "personalInfo": {
+    "name": "Bohdan Latkovskyi",
+    "location": "Regina, Saskatchewan, Canada",
+    "contact": {
+      "phone": "403-875-3944",
+      "email": "bogdanlotuk@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/bohdan-latkovskyi"
+    }
+  },
+  "professionalSummary": "Results-driven and versatile professional with years of experience in quality assurance, specializing in user support, test automation and project management. Proven track record of delivering high-quality solutions and driving continuous improvement initiatives. Skilled in collaborating with cross-functional teams to achieve project goals and exceed client expectations. Seeking opportunities to leverage my diverse skill set and expertise in a challenging role within the Canadian market.",
+  "qualifications": [
+    "Three years of hands-on experience in a Quality Assurance Engineer role",
+    "Strong leadership and collaborative skills, with the ability to integrate seamlessly into Agile teams",
+    "Degree in Electromechanical Systems of Automation and comprehensive technical knowledge",
+    "Technical proficiency in web services, RESTful APIs, Java, SQL, and NoSQL databases",
+    "Proven ability to work independently and meet deadlines in a fast-paced environment",
+    "Proficient understanding and experience working within Agile development teams",
+    "Proficiency in Microsoft Office, MS Windows, networking software, and security"
+  ],
+  "skills": [
+    "Customer support",
+    "Project Management",
+    "Test Automation",
+    "Quality Assurance",
+    "Agile Methodologies",
+    "Java core",
+    "Python core",
+    "JUnit",
+    "TestNG",
+    "Appium",
+    "Selenium",
+    "Playwright",
+    "SQL",
+    "Git",
+    "Postman",
+    "Swagger",
+    "AWS",
+    "Docker",
+    "Autodesk Autocad",
+    "Autodesk Revit",
+    "Microsoft Word",
+    "Microsoft Excel",
+    "Windows",
+    "Linux"
+  ],
+  "workExperience": [
+    {
+      "position": "User Support Technician",
+      "company": "Calgary Food Bank",
+      "location": "Calgary, Canada",
+      "period": {
+        "start": "Jun 2024",
+        "end": "Dec 2024"
+      },
+      "responsibilities": [
+        "Call Center Operators allow the Food Bank to fulfill its mission of providing emergency food support for families and individuals facing crisis",
+        "Helping clients by determining the root cause of their situation and connecting them with appropriate partnering agencies"
+      ]
+    },
+    {
+      "position": "Quality Assurance Engineer",
+      "company": "Pillar – Solid Offshore",
+      "location": "Vinnytsia, Ukraine",
+      "period": {
+        "start": "Oct 2021",
+        "end": "Apr 2024"
+      },
+      "responsibilities": [
+        "Developed and executed web application test plans, combining manual and automated testing methods",
+        "Analyzed test results, enhancing automated scripts for improved software quality"
+      ]
+    },
+    {
+      "position": "Embroidery Machine Operator and Designer",
+      "company": "Funnymedicalcaps",
+      "location": "Vinnytsia, Ukraine",
+      "period": {
+        "start": "Sep 2015",
+        "end": "Mar 2022"
+      },
+      "responsibilities": [
+        "Collaborated closely with customers to bring their creative visions to life",
+        "Managed the embroidery process from start to finish and ensured the quality and precision of each design"
+      ]
+    },
+    {
+      "position": "Junior Frontend Developer",
+      "company": "Freelance",
+      "location": "Vinnytsia Region, Ukraine",
+      "period": {
+        "start": "Mar 2020",
+        "end": "Oct 2021"
+      },
+      "responsibilities": [
+        "Translated design mockups into functional web interfaces using HTML5, CSS3, and JavaScript",
+        "Collaborated on frontend feature implementation and participated in code reviews"
+      ]
+    },
+    {
+      "position": "HVAC Engineer",
+      "company": "Ukrtransgaz",
+      "location": "Vinnytsia region, Vinnytsia, Ukraine",
+      "period": {
+        "start": "Jan 2012",
+        "end": "Nov 2020"
+      },
+      "responsibilities": [
+        "Led teams to ensure project success and mentored for professional growth",
+        "Developed HVAC plans adhering to regulations and ensured project quality and safety",
+        "Managed project schedules and coordinated with stakeholders, subcontractors, and suppliers"
+      ]
+    },
+    {
+      "position": "HVAC Draftsman",
+      "company": "Ukragroenergozberezhennia",
+      "location": "Vinnytsia Region, Vinnytsia, Ukraine",
+      "period": {
+        "start": "Aug 2010",
+        "end": "Jan 2012"
+      },
+      "responsibilities": [
+        "Created detailed HVAC drawings, collaborated with engineers, and ensured compliance with codes",
+        "Utilized CAD software for accurate 2D and 3D models",
+        "Prepared documentation and coordinated system integration into building designs"
+      ]
+    }
+  ],
+  "volunteering": [
+    {
+      "organization": "Calgary Food Bank",
+      "period": {
+        "start": "Jun 2024",
+        "end": "Dec 2024"
+      }
+    }
+  ],
+  "education": [
+    {
+      "institution": "Vinnytsia National Technical University",
+      "degree": "Master's degree, Electromechanical systems of automation",
+      "period": {
+        "start": "2013",
+        "end": "2015"
+      }
+    },
+    {
+      "institution": "Ivano-Frankivsk National Technical University of Oil and Gas",
+      "degree": "Master's degree, Design and operation of gas and oil pipelines and gas and oil storage facilities",
+      "period": {
+        "start": "2009",
+        "end": "2011"
+      }
+    },
+    {
+      "institution": "Vinnytsia National Technical University",
+      "degree": "Master's degree, HVAC, gas supply, water supply",
+      "period": {
+        "start": "2005",
+        "end": "2010"
+      }
+    }
+  ],
+  "certificates": [
+    {
+      "name": "CompTIA A+",
+      "date": "Sep 2024"
+    },
+    {
+      "name": "Google IT Support Professional Certificate",
+      "date": "Jul 2024"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "upper intermediate"
+    },
+    {
+      "language": "Ukrainian",
+      "proficiency": "native"
+    }
+  ],
+  "interests": [
+    "Reading",
+    "Volunteering", 
+    "Table tennis",
+    "Gym"
+  ]
+}
