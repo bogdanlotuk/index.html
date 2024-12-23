@@ -233,9 +233,9 @@
     <div class="fixed-wrapper">
       <div class="button-container">
         <a
-                href="Alla_Latkovska_CV.pdf"
+                :href="`${cvData.personalInfo.name.replace(/\s+/g, '_')}_Resume.pdf`"
                 class="download-btn"
-                download="Alla_Latkovska_CV.pdf"
+                :download="`${cvData.personalInfo.name.replace(/\s+/g, '_')}_Resume.pdf`"
                 aria-label="Download CV as PDF"
         >
           Download CV
