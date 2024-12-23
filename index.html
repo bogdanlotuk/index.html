@@ -262,6 +262,7 @@
               {{ cvData.personalInfo.contact.email }}
             </a>
             <a
+                    v-if="cvData.personalInfo.contact.linkedin"
                     :href="cvData.personalInfo.contact.linkedin"
                     target="_blank"
                     rel="noopener noreferrer"
