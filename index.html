@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Professional CV of Bohdan Latkovskyi">
+  <meta name="description">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3cEf5zqJQDWdOeBn65LTqOHwXM81+hv6M9+Qfher1ry4/Qz4+1lJhpmUpCJCYd" crossorigin="anonymous">
-  <title>Bohdan Latkovskyi</title>
+  <title></title>
 
   <style>
     /* Reset and base styles */
@@ -233,9 +233,9 @@
     <div class="fixed-wrapper">
       <div class="button-container">
         <a
-                href="Bohdan_Latkovskyi_CV.pdf"
+                href="Alla_Latkovska_CV.pdf"
                 class="download-btn"
-                download="Bohdan_Latkovskyi_CV.pdf"
+                download="Alla_Latkovska_CV.pdf"
                 aria-label="Download CV as PDF"
         >
           Download CV
@@ -393,7 +393,33 @@
       } catch (error) {
         console.error('Error loading CV data:', error)
       }
-    }
+    },
+    watch: {
+      // Watch for changes to cvData and update the head dynamically
+      cvData: {
+        deep: true, // Ensure deep watching for nested changes
+        handler() {
+          this.updateHead();
+        },
+      },
+    },
+    methods: {
+      updateHead() {
+        if (this.cvData?.personalInfo?.name) {
+          // Update <title>
+          document.title = this.cvData.personalInfo.name;
+
+          // Update meta description
+          const metaDescription = document.querySelector('meta[name="description"]');
+          if (metaDescription) {
+            metaDescription.setAttribute(
+                    'content',
+                    `Professional CV of ${this.cvData.personalInfo.name}`
+            );
+          }
+        }
+      },
+    },
   }).mount('#app')
 </script>
 </body>
