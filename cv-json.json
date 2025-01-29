@@ -164,6 +164,10 @@
   ],
   "certificates": [
     {
+      "name": "ISTQB (CTFL)",
+      "date": "Jan 2025"
+    },
+    {
       "name": "CompTIA A+",
       "date": "Sep 2024"
     },
