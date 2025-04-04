@@ -47,6 +47,20 @@
   ],
   "workExperience": [
     {
+      "position": "Labourer",
+      "company": "NorthRidge Development",
+      "location": "Regina, Canada",
+      "period": {
+        "start": "Feb 2025",
+        "end": "Apr 2025"
+      },
+      "responsibilities": [
+        "Executed assigned construction tasks efficiently and on schedule under the direction of the site supervisor",
+        "Accurately interpreted and worked from blueprints and technical drawings",
+        "Identified and resolved on-site issues promptly to maintain workflow and project timelines"
+      ]
+    },
+    {
       "position": "Call Center Operator (volunteer)",
       "company": "Calgary Food Bank",
       "location": "Calgary, Canada",
@@ -164,6 +178,10 @@
     }
   ],
   "certificates": [
+    {
+      "name": "WHMIS",
+      "date": "Feb 2025"
+    },
     {
       "name": "ISTQB (CTFL)",
       "date": "Jan 2025"
